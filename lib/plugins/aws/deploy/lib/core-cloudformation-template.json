@@ -12,5 +12,13 @@
         "Ref": "ServerlessDeploymentBucket"
       }
     }
+  },
+  "TOSPLIT": {
+  },
+  "TOSPLIT_ELEMENTS":{
+  },
+  "TOSPLIT_PARAMS":{
+  },
+  "DEPENDS": {
   }
 }
