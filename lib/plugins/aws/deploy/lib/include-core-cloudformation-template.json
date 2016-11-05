@@ -1,0 +1,49 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Metadata": {
+                "AWS::CloudFormation::Interface": {
+                },
+                "Stack": {
+                        "Value": "3"
+                },
+                "VersionDate": {
+                        "Value": "20160510"
+                },
+                "Identifier": {
+                        "Value": "templatename"
+                },
+                "Input": {
+                        "Description": "Lambda helpers"
+                },
+                "Output": {
+                        "Description": "Outputs ID of all deployed resources"
+                }
+  },
+  "Mappings": {
+  },
+  "Conditions": {
+  },
+  "Parameters": {
+       "ServerlessDeploymentBucket": {
+                    "Description": "The ServerlessDeploymentBucket for Lambda function references",
+                    "Type": "String"
+       },
+       "IamRoleLambdaExecution": {
+                    "Description": "The ServerlessDeploymentBucket for RestAPI Gateway references",
+                    "Type": "String"
+       },
+       "ApiGatewayRestApiRootResourceId": {
+                    "Description": "The ServerlessDeploymentBucket for RestAPI Gateway references",
+                    "Type": "String"
+       },
+       "ApiGatewayRestApi": {
+                    "Description": "The ServerlessDeploymentBucket for RestAPI Gateway references",
+                    "Type": "String"
+       }
+  },
+  "Resources": {
+  },
+  "Outputs": {
+  }
+}
