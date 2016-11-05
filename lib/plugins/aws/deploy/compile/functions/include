@@ -1,0 +1,25 @@
+{
+   "Include": {
+           "Type": "AWS::CloudFormation::Stack",
+            "Properties": {
+                  "TemplateURL": {
+                         "Fn::Join": ["", [
+                                             "https://s3.amazonaws.com/", { "Ref": "ServerlessDeploymentBucket" }, "/",
+                                     "serverlessincludefile"]]
+                  },
+                  "TimeoutInMinutes": "30",
+                  "Parameters": {
+			"ServerlessDeploymentBucket": {
+				"Ref": "ServerlessDeploymentBucket" 
+			},
+			"IamRoleLambdaExecution": {
+				"Fn::GetAtt": [ "IamRoleLambdaExecution", "Arn" ]
+			},
+			"ApiGatewayRestApi": { "Ref": "ApiGatewayRestApi" },
+			"ApiGatewayRestApiRootResourceId": {
+				"Fn::GetAtt": [ "ApiGatewayRestApi", "RootResourceId" ]
+			}
+		  }
+	}
+   }
+}
